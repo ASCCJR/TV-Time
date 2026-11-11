@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111512"><meta name="description" content="Seu espaço pessoal para descobrir séries e lembrar exatamente onde parou.">
+  <title>TV Time · Seu próximo episódio</title><link rel="icon" href="/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Pular para o conteúdo</a>
+  <aside class="sidebar">
+    <a class="brand" href="#home" aria-label="TV Time, início"><img src="/icon.svg" alt="" width="37" height="37"><span>tv time<span class="brand-dot">.</span></span></a>
+    <div class="sidebar-label">SEU ESPAÇO</div>
+    <nav aria-label="Navegação principal">
+      <a href="#home" data-nav="home"><span data-icon="home"></span>Visão geral</a>
+      <a href="#library" data-nav="library"><span data-icon="library"></span>Minha biblioteca<span id="library-count" class="nav-count">0</span></a>
+      <a href="#discover" data-nav="discover"><span data-icon="compass"></span>Descobrir<span class="tiny-dot"></span></a>
+    </nav>
+    <div class="sidebar-note"><span class="note-icon" data-icon="coffee"></span><strong>Um episódio de cada vez.</strong><p>O próximo favorito pode estar a uma busca de distância.</p></div>
+    <div class="sidebar-bottom"><a href="#backup" data-nav="backup"><span data-icon="shield"></span>Backup e dados</a><div class="local-profile"><div class="avatar">EU</div><div><strong>Meu espaço pessoal</strong><span><i></i>Salvo neste computador</span></div></div></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="breadcrumb" id="breadcrumb">Seu espaço <span>/</span> Visão geral</div><form id="search-form" role="search"><span data-icon="search"></span><input id="search" name="q" type="search" aria-label="Buscar séries" placeholder="Qual série você procura?" autocomplete="off" maxlength="120"><kbd>Ctrl K</kbd></form><button class="icon-button" id="backup-shortcut" title="Backup e dados" aria-label="Backup e dados"><span data-icon="download"></span></button></header>
+    <main id="content" tabindex="-1"><div class="loading-page"><div class="spinner"></div><p>Preparando sua próxima maratona…</p></div></main>
+    <footer><span>Feito para o seu tempo livre.</span><span>Catálogo: <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">TVMaze</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA</a></span></footer>
+  </div>
+  <dialog id="show-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title"><form method="dialog"><span class="confirm-symbol" data-icon="shield"></span><h2 id="confirm-title"></h2><p id="confirm-description"></p><div class="actions"><button class="button secondary" value="cancel">Cancelar</button><button class="button primary" id="confirm-accept" value="ok">Confirmar</button></div></form></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/app.js"></script>
+</body></html>

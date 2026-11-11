@@ -1,0 +1,13 @@
+{
+  "name": "tv-time-personal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Seu diário pessoal de séries, feito para o computador.",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test",
+    "check": "node --check server.mjs && node --check lib/store.mjs && node --check lib/catalog.mjs && node --check public/app.js"
+  }
+}
