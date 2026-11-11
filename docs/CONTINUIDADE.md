@@ -75,3 +75,11 @@ No Edge, com banco isolado em `data/browser-test` e porta 4320, foram conferidos
 A exportação e importação foram verificadas pela API nos testes automatizados. A observação do download pelo navegador excedeu o tempo da ferramenta e o arquivo não foi localizado na pasta Downloads padrão; o fluxo de escolher um arquivo e importar pela interface ainda não foi validado de ponta a ponta. Não apresentar essa etapa como manualmente aprovada.
 
 O inicializador PowerShell foi executado com sucesso, iniciou o app na porta 4317 e abriu a página no Edge. A biblioteca definitiva começou vazia. O catálogo retornou 12 sugestões reais. Prévia em `docs/tv-time-preview.jpg`.
+
+## Ajuste visual e acesso ao backup
+
+Em 11/11/2026, o usuário rejeitou a paleta verde. A interface passou a usar fundos neutros em grafite, texto cinza/branco e destaque azul. As cores estão em `public/styles.css`, com variáveis `--accent` e `--accent-ink`; o CSS foi separado em linhas para facilitar a manutenção.
+
+O usuário também não localizou o backup e perguntou se era feito no Codex. Para esclarecer o acesso, **Backup e dados** foi movido para o menu principal e o botão superior ganhou o texto **Backup**. O arquivo é baixado dentro do próprio app, na tela `/#backup`, pelo botão **Baixar meu backup**.
+
+Validação desta alteração: `npm run check` passou; a aparência e o botão superior foram conferidos no Edge com biblioteca de teste separada. A versão normal foi aberta na tela de backup, com biblioteca vazia. As prévias em `docs/tv-time-preview.jpg` e `docs/backup-screen.jpg` foram atualizadas. Nenhuma regra de histórico ou de armazenamento mudou.
