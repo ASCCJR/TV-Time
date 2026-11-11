@@ -8,6 +8,8 @@ Projeto pessoal do usuário para computador. Prioridade: registrar séries e o e
 
 Leia `README.md` e `docs/CONTINUIDADE.md`. Confira o estado atual do Git antes de editar. O repositório escolhido pelo usuário é `ASCCJR/TV-Time`; não substitua por outro serviço de hospedagem sem necessidade.
 
+Ao retomar em outro computador, leia também `docs/RETOMADA_NOVO_COMPUTADOR.md`. Não presuma que o caminho do PC antigo, seus dados locais ou as conexões de plugins existem no novo ambiente.
+
 ## Dados
 
 - Nunca publique `data/`, backups pessoais, banco SQLite, credenciais ou logs.

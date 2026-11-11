@@ -35,6 +35,8 @@ Importar soma registros assistidos. Havendo a mesma série, os metadados pessoai
 
 Pasta inicial do usuário: `C:\Users\anton\Projetos\TVTime`.
 
+Para mudar de computador, começar por [RETOMADA_NOVO_COMPUTADOR.md](RETOMADA_NOVO_COMPUTADOR.md). O diretório acima é uma referência do PC antigo, não um caminho obrigatório no próximo.
+
 ```powershell
 npm run check
 npm test
@@ -83,3 +85,19 @@ Em 11/11/2026, o usuário rejeitou a paleta verde. A interface passou a usar fun
 O usuário também não localizou o backup e perguntou se era feito no Codex. Para esclarecer o acesso, **Backup e dados** foi movido para o menu principal e o botão superior ganhou o texto **Backup**. O arquivo é baixado dentro do próprio app, na tela `/#backup`, pelo botão **Baixar meu backup**.
 
 Validação desta alteração: `npm run check` passou; a aparência e o botão superior foram conferidos no Edge com biblioteca de teste separada. A versão normal foi aberta na tela de backup, com biblioteca vazia. As prévias em `docs/tv-time-preview.jpg` e `docs/backup-screen.jpg` foram atualizadas. Nenhuma regra de histórico ou de armazenamento mudou.
+
+## Conversa sobre hospedagem e plugins
+
+O usuário esclareceu que não possui exportação do histórico do serviço antigo; começará a reconstruí-lo manualmente. Quer evitar custos e escolher serviços que o Codex consiga administrar, porque não conhece configuração de sites e bancos.
+
+Foram discutidos GitHub para código, Vercel para hospedagem e Supabase para dados/login. Neon e Firebase também foram identificados como alternativas com plugins. Vercel e Supabase foram sugeridos para instalação/conexão, mas isso não foi confirmado. Nenhum serviço online foi implantado, nenhuma credencial foi acrescentada ao projeto e não houve contratação de plano pago. A recomendação não deve ser tratada como migração já realizada ou autorização para contratar serviços. Conferir disponibilidade, acesso e condições dos planos no momento de retomar.
+
+## Preparação para troca de computador — 11/11/2026
+
+Após consultar o remoto, a cópia local estava limpa e alinhada com `origin/main`, no commit `5b2067f`, antes desta revisão de documentação. Não havia código pendente de envio. O conteúdo ignorado estava em `data/`, incluindo a biblioteca pessoal, cache, backups, logs e dados de testes; nada disso deve entrar no repositório público.
+
+Foi preparado um backup JSON separado dentro de `data/migracao/`, acompanhado de SHA-256. A integridade do banco de origem foi conferida em modo somente leitura. A importação foi validada em outro banco temporário e a persistência verificada após reabri-lo, preservando marcações, notas, status e datas pessoais. Nenhuma restauração foi feita sobre a biblioteca original. Esta validação não substitui a cópia do backup para fora do PC antigo.
+
+O usuário foi informado sobre a diferença entre código público e biblioteca pessoal; não autorizou envio do backup ao Drive até este registro. O destino externo precisa ser confirmado. Se houver novos registros depois da exportação, preparar um backup atualizado. Não registrar no GitHub nomes de séries, anotações, conteúdo do backup ou credenciais.
+
+Verificações desta preparação: `npm run check` e os seis testes passaram novamente no Windows com Node.js 24.20.0. Uma cópia limpa baixada do GitHub iniciou o servidor sem instalar pacotes, em caminho com espaços e com diretório de execução diferente da pasta do projeto. A biblioteca inicial estava vazia, os arquivos da interface responderam e a importação/exportação pela API preservou os dados; a persistência foi conferida após encerrar o servidor. A sintaxe do inicializador PowerShell passou. Não foi simulado um Windows sem Node instalado nem repetido o download/importação pela interface do navegador. O código funcional não mudou nesta preparação.

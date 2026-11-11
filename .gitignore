@@ -1,4 +1,8 @@
 data/
+*.sqlite
+*.sqlite-*
+tv-time-backup-*.json
+tv-time-backup-*.json.sha256
 node_modules/
 .env
 .env.*
