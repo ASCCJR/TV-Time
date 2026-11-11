@@ -2,6 +2,8 @@
 
 O projeto está no repositório [ASCCJR/TV-Time](https://github.com/ASCCJR/TV-Time), na versão principal (`main`). A pasta pode ter outro nome ou ficar em outro lugar no PC novo.
 
+**Nesta mudança de PC (11/11/2026), o usuário confirmou que os registros locais eram só um teste e dispensou a transferência da biblioteca. Pode começar com a lista vazia.** As instruções de backup abaixo servem quando houver registros que queira manter.
+
 ## O que levar
 
 | Item | Onde fica | Precisa copiar do PC antigo? |
@@ -40,7 +42,7 @@ Importar um backup soma as marcações às que já existem. Não apaga episódio
 
 Copie esta mensagem em uma conversa no computador novo:
 
-> Quero retomar meu TV Time pessoal do repositório https://github.com/ASCCJR/TV-Time. Localize ou baixe a versão principal (`main`) sem substituir trabalho existente. Leia AGENTS.md, README.md, docs/CONTINUIDADE.md e docs/RETOMADA_NOVO_COMPUTADOR.md. Confira Node.js 24+, execute as verificações e abra o aplicativo local para mim. Verifique comigo se trouxe um backup antes de restaurar dados; nunca publique a biblioteca no GitHub nem apague dados existentes. Preserve o visual grafite com azul. A publicação online ainda está em discussão: quero uma solução gratuita que você consiga administrar por plugins. Não presuma que Supabase ou Vercel já estejam conectados.
+> Quero retomar meu TV Time pessoal do repositório https://github.com/ASCCJR/TV-Time. Localize ou baixe a versão principal (`main`) sem substituir trabalho existente. Leia AGENTS.md, README.md, docs/CONTINUIDADE.md e docs/RETOMADA_NOVO_COMPUTADOR.md. Confira Node.js 24+, execute as verificações e abra o aplicativo local para mim. Os registros do PC antigo eram só testes: posso começar com a biblioteca vazia, sem importar backup. Nunca publique a biblioteca no GitHub nem apague dados que já existam no novo ambiente. Preserve o visual grafite com azul. A publicação online ainda está em discussão: quero uma solução gratuita que você consiga administrar por plugins. Não presuma que Supabase ou Vercel já estejam conectados.
 
 ## Instruções técnicas para a próxima sessão
 
